@@ -1,0 +1,69 @@
+openapi: '3.0.0'
+info:
+  title: PTAX Scraping
+  description: PTAX scraping
+  version: '1.0.0'
+
+paths:
+  '/get-data-bcb-ptax/usd':
+    get:
+      summary: 'Returns ptax data history for dolar in csv'
+      parameters:
+        - in: query
+          name: start_date
+          description: Start date
+          schema:
+            type: string
+            format: date
+            example: '2021-06-27'
+        - in: query
+          name: end_date
+          description: End date
+          schema:
+            type: string
+            format: date
+            example: '2021-07-27'
+      responses:
+        200:
+          description: 'Returns ptax data history for dolar in csv'
+          content:
+            text/csv:
+              schema:
+                type: string
+                example: '28062021;220;A;USD;4,9414;4,9420;1,0000;1,0000\n'
+        default:
+          description: Error
+      tags:
+        - Get PTAX
+        
+  '/get-data-bcb-ptax/euro':
+    get:
+      summary: 'Returns ptax data history for euro in csv'
+      parameters:
+        - in: query
+          name: start_date
+          description: Start date
+          schema:
+            type: string
+            format: date
+            example: '2021-06-27'
+        - in: query
+          name: end_date
+          description: End date
+          schema:
+            type: string
+            format: date
+            example: '2021-07-27'
+      responses:
+        200:
+          description: 'Returns ptax data history for dolar in csv'
+          content:
+            text/csv:
+              schema:
+                type: string
+                example: '28062021;978;B;EUR;5,8981;5,8993;1,1936;1,1937\n'
+        default:
+          description: Error
+      tags:
+        - Get PTAX
+ 
