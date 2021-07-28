@@ -1,7 +1,7 @@
 # BCB PTAX
 
 ### Online
-[![deployed](http://bcb-ptax.herokuapp.com/swagger/)
+[![deployed](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](http://bcb-ptax.herokuapp.com/swagger/)
 
 Web scraping bot that seeks data from the central bank of Brazil on dollar and euro quotations.
 
